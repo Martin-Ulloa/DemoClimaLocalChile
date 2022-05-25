@@ -1,0 +1,10 @@
+<h2>{{ title }}</h2>
+
+<div class="container mt-5">
+    <select class="form-select" [(ngModel)]="selectedR" (change)="passRegion(selectedR)">
+        <option selected hidden>""</option>
+        <option *ngFor="let region of regiones | async" value="{{region.codigo}}">
+            {{ region.codigo + " " + region.nombre}}
+        </option>
+    </select> 
+</div>

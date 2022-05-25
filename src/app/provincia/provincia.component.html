@@ -1,0 +1,8 @@
+<div class="container mt-5" *ngIf="urlParameterP != ''">
+    <h2>{{title}}</h2>
+    <select class="form-select" [(ngModel)]="selectedP" (change)="passProvincia(selectedP)">
+        <option *ngFor="let provincia of provincias | async" value="{{provincia.codigo}}">
+            {{ provincia.codigo + " " + provincia.nombre}}
+        </option>
+    </select> 
+</div>

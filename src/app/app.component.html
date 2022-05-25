@@ -1,0 +1,15 @@
+<h1>Climas de Comunas de Chile</h1>
+<region (passRegionEvent)="receiveRegion($event)"></region>
+
+<provincia [urlParameterP]="selectedRegion" 
+(passProvinciaEvent)="receiveProvincia($event)">
+</provincia>
+
+<comuna [urlParameterC1]="selectedRegion" 
+[urlParameterC2]="selectedProvincia" 
+(passComunaEvent)="receiveComuna($event)">
+</comuna>
+
+<clima [latitud]="latitudComuna" [longitud]="longitudComuna" [nombre]="selectedComuna"></clima>
+
+<router-outlet></router-outlet>
