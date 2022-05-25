@@ -13,6 +13,8 @@ export class AppComponent {
   latitudComuna ="";
   longitudComuna ="";
 
+  /*limpia los valores de las hojas en caso de ya estar seleccionados para prevenir errores al 
+  re-seleccionar una región distinta cuando una provincia o comuna ya está elegida*/
   receiveRegion(codigoRegion: string): void {
     this.selectedRegion = codigoRegion;
     this.selectedProvincia="";

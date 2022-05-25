@@ -8,8 +8,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class RegionComponent implements OnInit {
   title = "Seleccionar región de Chile"
-  regiones: any;
-  selectedR: any;
+  regiones: any; //iterador para las regiones
+  selectedR!: string; // region seleccionada para emitir
 
   @Output() passRegionEvent = new EventEmitter<string>();
   

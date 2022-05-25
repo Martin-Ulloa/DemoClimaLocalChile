@@ -18,9 +18,9 @@
 
     <table>
         <tr>
-            <th>día</th>
-            <th>probabilidad de precipitación</th>
-            <th>descripción</th>
+            <th>Día</th>
+            <th>Probabilidad de precipitación</th>
+            <th>Descripción</th>
         </tr> 
         <ng-container *ngIf="(climas | async) as c">  
         <tr *ngFor="let clima of c.list">

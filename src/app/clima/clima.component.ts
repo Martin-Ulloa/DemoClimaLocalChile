@@ -9,7 +9,7 @@ import { Observable } from 'rxjs/internal/Observable';
 })
 export class ClimaComponent implements OnInit {
   title = "Información de la comuna"
-  climas: Observable<any> | undefined;
+  climas: Observable<any> | undefined; //objecto clima a obtener de la API
 
   @Input() latitud = ""
 

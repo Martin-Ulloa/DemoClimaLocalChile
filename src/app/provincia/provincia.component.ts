@@ -7,9 +7,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./provincia.component.css']
 })
 export class ProvinciaComponent implements OnInit {
-  title = "Seleccionar provinca"
-  provincias: any;
-  selectedP: any;
+  title = "Seleccionar provincia"
+  provincias: any; //iterador para las provincias
+  selectedP!: string; //provincia seleccionada para emitir
+ //provincia seleccionada para emitir
   
   @Output() passProvinciaEvent = new EventEmitter<string>();
 

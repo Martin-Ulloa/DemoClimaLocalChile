@@ -8,8 +8,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ComunaComponent implements OnInit {
   title = "Seleccionar comuna"
-  comunas: any;
-  selectedC: any;
+  comunas: any; //iterador para las comunas
+  selectedC: any; //objeto comuna seleccionada a obtener de la API para emitir
   
   @Output() passComunaEvent = new EventEmitter<any>();
 
@@ -19,7 +19,6 @@ export class ComunaComponent implements OnInit {
 
   passComuna(Comuna: any){
     this.passComunaEvent.emit(Comuna);
-    //console.log(Comuna)
   }
 
   constructor(private service: ApiGobiernoService) { }
