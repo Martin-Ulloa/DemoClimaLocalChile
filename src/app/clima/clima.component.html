@@ -23,7 +23,7 @@
             <th>descripción</th>
         </tr>  
         <tr *ngFor="let clima of (climas | async).list">
-            <td>{{ clima.dt | date : 'medium' }}</td>
+            <td>{{ clima.dt * 1000 | date : 'medium' }}</td>
             <td>{{clima.pop}}</td>
             <td *ngFor="let weather of clima.weather">{{weather.description}}</td>
             
