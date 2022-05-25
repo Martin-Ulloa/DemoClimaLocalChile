@@ -21,13 +21,14 @@
             <th>día</th>
             <th>probabilidad de precipitación</th>
             <th>descripción</th>
-        </tr>  
-        <tr *ngFor="let clima of (climas | async).list">
+        </tr> 
+        <ng-container *ngIf="(climas | async) as c">  
+        <tr *ngFor="let clima of c.list">
             <td>{{ clima.dt * 1000 | date : 'medium' }}</td>
             <td>{{clima.pop}}</td>
-            <td *ngFor="let weather of clima.weather">{{weather.description}}</td>
-            
+            <td *ngFor="let weather of clima.weather">{{weather.description}}</td>  
         </tr>
+        </ng-container>
     </table>
 
 </div>
